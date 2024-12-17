@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="dashboard" stylesheets="@../../styles/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ignat.malko.controller.client.DashboardController">
+    <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Привет" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+    <Label fx:id="dateLabel" styleClass="date_lbl" text="Сегодня, 12/8/2024" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+    <Text layoutX="811.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Сводка по счетам" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="100.0" />
+    <Text layoutX="22.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Мои счета" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+    <HBox layoutX="20.0" layoutY="120.0" prefHeight="200.0" prefWidth="800.0" styleClass="accounts_view" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+        <AnchorPane prefHeight="150.0" prefWidth="400.0">
+            <styleClass>
+                <String fx:value="account" />
+                <String fx:value="account_gradient" />
+            </styleClass>
+            <Label fx:id="mainBalance" layoutX="14.0" layoutY="23.0" styleClass="account_balance" text="Не открыт" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+            <graphic>
+               <FontAwesomeIconView visible="false" fx:id="mainAccountDollar" glyphName="DOLLAR" size="30" />
+            </graphic></Label>
+            <Label fx:id="mainNumber" layoutX="14.0" layoutY="82.0" styleClass="account_number" text="**** **** **** 4444" visible="false" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+            <VBox layoutX="181.0" layoutY="15.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
+            <FontAwesomeIconView glyphName="BANK" layoutX="258.0" layoutY="29.0" size="50" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <Text fx:id="mainAccountText" layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Основной счет" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+        </AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="400.0">
+            <styleClass>
+                <String fx:value="account" />
+                <String fx:value="account_gradient" />
+            </styleClass>
+            <Label fx:id="savingsBalance" layoutX="14.0" layoutY="23.0" styleClass="account_balance" text="Не открыт" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+            <graphic>
+               <FontAwesomeIconView visible="false" fx:id="savingsAccountDollar" glyphName="DOLLAR" size="30" />
+            </graphic></Label>
+            <Label fx:id="savingsNumber" layoutX="14.0" layoutY="82.0" styleClass="account_number" text="**** **** **** 5555" visible="false" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+            <VBox layoutX="181.0" layoutY="15.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
+            <FontAwesomeIconView glyphName="BANK" layoutX="258.0" layoutY="29.0" size="50" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <Text fx:id="savingsAccountText" layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Накопительный счет" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+        </AnchorPane>
+    </HBox>
+    <VBox layoutX="669.0" layoutY="120.0" prefHeight="180.0" prefWidth="210.0" styleClass="summary_view" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
+        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="acc_summary_container">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Доходы" />
+            <Label fx:id="incomeLabel" styleClass="income_amount" text="+ $4000.00" />
+            <Line endX="160.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Расходы" />
+            <Label fx:id="expenseLabel" styleClass="expense_amount" text="- $1500.00" />
+        </VBox>
+    </VBox>
+    <ListView fx:id="transactionListview" layoutX="20.0" layoutY="378.0" prefHeight="350.0" prefWidth="700.0" styleClass="transaction_listview" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
+    <VBox layoutX="624.0" layoutY="405.0" prefHeight="350.0" prefWidth="300.0" styleClass="new_trans_container" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+        <Label text="Номер счета или телефон:" />
+        <TextField fx:id="newTransactionTextField" />
+        <Label text="Сумма:" />
+        <TextField fx:id="newAmountTextField" />
+        <Label text="Сообщение:(Опционально)" />
+        <TextArea fx:id="newMessageTextField" prefHeight="70.0" prefWidth="200.0" />
+        <Button fx:id="sendMoneyButton" mnemonicParsing="false" onAction="#onSendMoney" text="Отправить" />
+      <Label fx:id="newTransactionErrorLabel" styleClass="transaction_error" text="Ошибка" visible="false" />
+    </VBox>
+</AnchorPane>

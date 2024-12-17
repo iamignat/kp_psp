@@ -1,0 +1,70 @@
+create table interest_rates
+(
+    type  tinyint null,
+    value double  not null,
+    id    bigint auto_increment
+        primary key,
+    check (`type` between 0 and 1)
+);
+
+create table person_data
+(
+    age         int          null,
+    Id          bigint auto_increment
+        primary key,
+    email       varchar(255) null,
+    firstName   varchar(255) null,
+    lastName    varchar(255) null,
+    phoneNumber varchar(255) null,
+    sex         varchar(255) null
+);
+
+create table users
+(
+    role           tinyint      null,
+    id             bigint auto_increment
+        primary key,
+    person_data_id bigint       null,
+    login          varchar(255) null,
+    password       varchar(255) null,
+    constraint UKdcghoi5v9l2edcvtosk96k0c
+        unique (person_data_id),
+    constraint FK89cgxw185b3qd4oibj3vh67cp
+        foreign key (person_data_id) references person_data (Id),
+    check (`role` between 0 and 2)
+);
+
+create table accounts
+(
+    balance  double       not null,
+    created  date         null,
+    status   tinyint      null,
+    type     tinyint      null,
+    id       bigint auto_increment
+        primary key,
+    owner_id bigint       null,
+    rate_id  bigint       null,
+    number   varchar(255) null,
+    constraint FKjln86358moqf5k5pw89oiq8ur
+        foreign key (owner_id) references users (id),
+    constraint FKnrvymjhlvpfnnv3ec6plbabf2
+        foreign key (rate_id) references interest_rates (id),
+    check (`status` between 0 and 3),
+    check (`type` between 0 and 1)
+);
+
+create table transactions
+(
+    amount      double       not null,
+    date        date         null,
+    id          bigint auto_increment
+        primary key,
+    receiver_id bigint       null,
+    sender_id   bigint       null,
+    message     varchar(255) null,
+    constraint FKep3ko5p4fdvnw79p1uhw2q6nf
+        foreign key (sender_id) references accounts (id),
+    constraint FKjord7to517f34oa9ni6puyt85
+        foreign key (receiver_id) references accounts (id)
+);
+

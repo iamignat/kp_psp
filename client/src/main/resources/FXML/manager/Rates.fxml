@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onKeyPressed="#onEnterPressed" prefHeight="720.0" prefWidth="1080.0" styleClass="register_container" stylesheets="@../../styles/rate.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ignat.malko.controller.manager.RatesController">
+    <VBox alignment="TOP_CENTER" layoutX="235.0" layoutY="31.0" prefHeight="680.0" prefWidth="1040.0" styleClass="register_form_container" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <Label fx:id="errorLabel" styleClass="error_lbl" visible="false" />
+        <Label text="Процентные ставки по счетам:" />
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="550.0" styleClass="hbox">
+            <VBox prefHeight="100.0" prefWidth="750.0" styleClass="hbox">
+                <Label text="Основной счет" />
+                <Spinner fx:id="mainSpinner" prefWidth="750.0">
+                   <opaqueInsets>
+                       <Insets />
+                   </opaqueInsets>
+                   <VBox.margin>
+                       <Insets top="10.0" />
+                   </VBox.margin>
+                </Spinner>
+            </VBox>
+         <FontAwesomeIconView glyphName="PERCENT" size="50">
+            <HBox.margin>
+               <Insets bottom="5.0" left="10.0" />
+            </HBox.margin>
+         </FontAwesomeIconView>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="550.0" styleClass="hbox">
+            <VBox prefHeight="100.0" prefWidth="750.0" styleClass="hbox">
+                <Label text="Накопительный счет" />
+                <Spinner fx:id="savingsSpinner" prefWidth="750.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Spinner>
+            </VBox>
+         <FontAwesomeIconView glyphName="PERCENT" size="50">
+            <HBox.margin>
+               <Insets bottom="5.0" left="10.0" />
+            </HBox.margin>
+         </FontAwesomeIconView>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1080.0" spacing="150.0">
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Обновить">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+          </Button>
+        </HBox>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+    </VBox>
+</AnchorPane>

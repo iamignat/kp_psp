@@ -1,0 +1,110 @@
+.accounts_view_container {
+    -fx-background-color: #ffffe6;;
+}
+
+.accounts_view_container Text {
+    -fx-fill: #000000;
+    -fx-font-family: "Calibri";
+}
+
+.accounts_view_container VBox {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.accounts_view_container VBox Text {
+    -fx-font-size: 2em;
+}
+
+.accounts_view_container VBox Label {
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+
+.accounts_view_container TextField {
+    -fx-pref-width: 540;
+    -fx-pref-height: 50;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+}
+
+.accounts_view_container Button {
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-background-color: linear-gradient(to right, #ff99cc, #ff66b2);
+    -fx-pref-width: 540;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #FFFFFF;
+}
+
+.accounts_view_container Button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #ff3385;
+}
+
+
+/* Accounts View */
+.accounts_view {
+    -fx-background-color: #ffe6f2;
+    -fx-background-radius: 10 0 0 10;
+    -fx-padding: 10 0 10 0;
+    -fx-alignment: center;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #ffe6f2;
+    -fx-spacing: 10;
+}
+
+.account {
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 10, 0, 0, 10);
+}
+
+.account VBox {
+    -fx-background-color: #ff99cc;
+}
+
+.account Text {
+    -fx-fill: #FFFFFF;
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 2em;
+}
+
+.account FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}
+
+.account_gradient {
+    -fx-background-color: linear-gradient(to right, #ff99cc, #ff66b2);
+}
+
+.account_balance {
+    -fx-text-fill: #000000;
+    -fx-font-family: Calibri;
+    -fx-font-size: 4em;
+    -fx-font-weight: bold;
+}
+
+.account_number {
+    -fx-text-fill: #000000;
+    -fx-font-family: Calibri;
+    -fx-font-size: 3em;
+    -fx-text-alignment: center;
+}
+
+.accounts_view_container Button {
+    -fx-background-color: linear-gradient(to left, #ff99cc, #ff66b2);
+    -fx-pref-width: 175;
+    -fx-pref-height: 50;
+    -fx-font-size: 2em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #FFFFFF;
+}
+.accounts_view_container Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #ff3385;
+}
+
+
+
+

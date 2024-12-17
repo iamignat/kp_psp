@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="login_container" stylesheets="@../../styles/login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ignat.malko.controller.auth.LoginController" onKeyPressed="#onEnterPressed">
+   <VBox prefHeight="600.0" prefWidth="300.0" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FontAwesomeIconView glyphName="BANK" size="50"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kitten's Bank" />
+   </VBox>
+   <VBox alignment="CENTER" layoutX="400.0" prefHeight="500.0" prefWidth="400.0" spacing="50.0" styleClass="login_form_container" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <Label fx:id="errorLabel" styleClass="error_lbl" visible="false" />
+      <Label text="Логин:" />
+      <TextField fx:id="loginTextField" styleClass="input_field" />
+      <Label text="Пароль:" />
+      <PasswordField fx:id="passwordField" styleClass="input_field" />
+      <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#onLogin" prefHeight="34.0" prefWidth="400.0" text="Войти">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#onRegister" prefWidth="400.0" text="Зарегистрироваться">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </VBox>
+</AnchorPane>

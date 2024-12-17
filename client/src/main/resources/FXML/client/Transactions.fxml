@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" styleClass="transactions_container" stylesheets="@../../styles/transactions.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ignat.malko.controller.client.TransactionsController">
+   <Text layoutX="349.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Транзакции" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="20.0" />
+   <ListView fx:id="transactionsListView" layoutX="14.0" layoutY="84.0" prefHeight="600.0" prefWidth="980.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0" />
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onKeyPressed="#onEnterPressed" prefHeight="720.0" prefWidth="1080.0" styleClass="register_container" stylesheets="@../../styles/profile.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ignat.malko.controller.client.ProfileController">
+    <VBox alignment="BOTTOM_CENTER" layoutX="235.0" layoutY="31.0" prefHeight="680.0" prefWidth="1040.0" styleClass="register_form_container" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <Label fx:id="errorLabel" styleClass="error_lbl" visible="false" />
+        <Label text="Логин:" />
+        <TextField fx:id="loginTextField" styleClass="input_field">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+        <HBox spacing="150.0">
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Новый пароль:" />
+                <PasswordField fx:id="passwordField" styleClass="input_field">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </PasswordField>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Повторите пароль:" />
+                <PasswordField fx:id="repeatPasswordField" styleClass="input_field">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </PasswordField>
+            </VBox>
+        </HBox>
+        <HBox spacing="150.0">
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Фамилия:" />
+                <TextField fx:id="lastNameTextField" styleClass="input_field">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Имя:" />
+                <TextField fx:id="firstNameTextField" styleClass="input_field">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            </VBox>
+        </HBox>
+        <HBox spacing="150.0">
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Email:" />
+                <TextField fx:id="emailTextField" styleClass="input_field">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Номер телефона:" />
+                <TextField fx:id="phoneNumberTextField" styleClass="input_field">
+                   <VBox.margin>
+                       <Insets top="10.0" />
+                   </VBox.margin>
+                </TextField>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="550.0" spacing="150.0">
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Возраст:" />
+                <Spinner fx:id="ageSpinner" prefWidth="500.0">
+                   <opaqueInsets>
+                       <Insets />
+                   </opaqueInsets>
+                   <VBox.margin>
+                       <Insets top="10.0" />
+                   </VBox.margin>
+                </Spinner>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="500.0">
+                <Label text="Пол:" />
+                <HBox prefHeight="100.0" spacing="30.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Мужской" />
+                    <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" text="Женский" />
+                    <RadioButton fx:id="otherRadioButton" mnemonicParsing="false" text="Другое" />
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1080.0" spacing="150.0">
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Обновить">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+          </Button>
+        </HBox>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+    </VBox>
+</AnchorPane>
