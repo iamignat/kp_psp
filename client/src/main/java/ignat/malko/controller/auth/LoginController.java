@@ -73,4 +73,3 @@ public class LoginController {
     }
 }
 
-// TODO: 12.07.2024: Change all fonts

@@ -113,4 +113,3 @@ public class UserHandler {
     }
 }
 
-// TODO: 13.12.2024: Add password encryption and tests
